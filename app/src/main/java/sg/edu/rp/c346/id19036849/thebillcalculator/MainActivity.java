@@ -42,11 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 double totalBill = 0;
                 double eachPays = 0;
 
-                if ((etAmount.getText().toString().trim().length() > 0) && (etNumOfPax.getText().toString().trim().length() > 0)) {
+                if ((etAmount.getText().toString().trim().length() > 0) &&
+                        (etNumOfPax.getText().toString().trim().length() > 0) &&
+                        ((Double.parseDouble(etAmount.getText().toString().trim())) > 0) &&
+                        ((Integer.parseInt(etNumOfPax.getText().toString().trim())) > 0) ) {
+
                     amount = Double.parseDouble(etAmount.getText().toString());
                     numOfPax = Integer.parseInt(etNumOfPax.getText().toString());
 
-                    if (etDiscount.getText().toString().trim().length() > 0) {
+                    if ((etDiscount.getText().toString().trim().length() > 0) &&
+                            ((Double.parseDouble(etDiscount.getText().toString().trim())) > 0) ) {
                         discount = Double.parseDouble(etDiscount.getText().toString());
                     }
 
@@ -64,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     tvEachPays.setText(String.format("Each Pays :$%.2f", eachPays));
                 } else {
                     tvTotalBill.setText("");
-                    tvEachPays.setText("Please enter the necessary details (\"Amount\" and \"Num of Pax\").");
+                    tvEachPays.setText("Please check the entries for invalid values. \"Amount\" and \"Num of Pax\" are required, \"Discount (%)\" is optional.");
                 }
             }
         });

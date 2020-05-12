@@ -18,7 +18,8 @@
     <EditText
         android:id="@+id/etAmount"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>
 
     <TextView
         android:id="@+id/tvNumOfPax"
@@ -29,7 +30,8 @@
     <EditText
         android:id="@+id/etNumOfPax"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,8 +67,7 @@
         android:id="@+id/etDiscount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/tvTotalBill"
