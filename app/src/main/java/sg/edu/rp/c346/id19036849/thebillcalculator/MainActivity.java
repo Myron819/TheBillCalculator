@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+//
         btReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
